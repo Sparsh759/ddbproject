@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class-hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="attendance.css">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script >
+    function Added(){
+      if(document.getElementByName("Rollno").value==" "||document.getElementsByName("Name").value==" "||document.getElementsByName("Marks").value=null||){
+        alert("Enter valid Details");
+      }
+      else{
+       alert("Changes added to Database");
+       window.location = "add.html";
+     }
+    }
+  </script>
+  <style type="text/css">
+    .Box{
+      margin-top: 5em;
+      margin-left: 20em;
+}
+  </style>
+  </head>
+    <body>  
+           <div class="Box"> 
+            <form method="POST" action="add.php">
+            <div style="margin-left: 12em;">
+  <h2 style="margin-left: 4em;">Student Data</h2>
+  <div style="margin-left: 16em; margin-bottom: 4em;">
+   <span class="custom-dropdown big" >
+    <select id="options" name="options">    
+        <option value="1" selected="true">INSERTING</option>  
+        <option value="2">UPDATING</option>
+        <option value="3">DELETING</option>
+    </select>
+</span>
+</div>
+</div>
+
+ <table>
+            <tr>
+              <th></th>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>Marks</th>
+           </tr>
+       
+       
+           <td></td>
+            <td><input type='text' name="Rollno" ></td>
+            <td><input type='text' name="Name"></td>
+            <td><input type='number' name="Marks"></td>   
+        </tr>
+    </table>
+    <div style="margin-top: 2em;">
+  <input class="btn btn-primary btn-lg" type="submit" onclick="Added()" value='Submit' style="margin-left: 20em;">
+  </form>
+  
+
+<a href="web.php"><input type="button" class="btn btn-primary btn-lg" style="margin-left: 1em;" value="All Data"></a>
+</div>
+
+</div>
+
+</body>
+</html>
